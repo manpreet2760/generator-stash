@@ -1,0 +1,80 @@
+<html lang="en" >
+<head>
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- bower:css -->
+    <!-- endbower -->
+</head>
+<body ng-app="bot-stash" class="carddemoBasicUsage">
+<!--
+  Your HTML content here
+-->
+
+<div ng-controller="AppCtrl" ng-cloak >
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="75" layout="column">
+            <md-card>
+
+                <md-list>
+                    <md-list-item class="md-2-line" ng-repeat="bot in bots">
+                        <!--<md-checkbox ng-model="item.done"></md-checkbox>-->
+                        <div class="md-list-item-text">
+                            <!--<h3>{{item.title}}</h3>-->
+                            <!--<p>{{item.description}}</p>-->
+                            <md-grid-list
+                                    md-cols-xs="8"
+                                    md-cols-sm="8" md-cols-gt-sm="15"
+                                    md-row-height-gt-sm="111px" md-row-height="111px"
+                                    md-gutter="5px" md-gutter-gt-sm="5px">
+                                <md-grid-tile class="title-upvotes">
+                                    {{bot.upvotes}}
+                                </md-grid-tile>
+                                <md-grid-tile md-colspan="3" >
+                                    <img ng-src="http://gtspirit.com/wp-content/uploads/2015/03/Matte-Lamborghini-Aventador-Roadster-3.jpg" style="width: 131px; height: 96px">
+                                </md-grid-tile>
+                                <md-grid-tile md-colspan="10">
+                                    <md-grid-list md-rows-gt-sm="3" layout="column" flex="fit" >
+                                        <div md-rowspan="1" class="tile-heading">
+                                            {{bot.title}}
+                                        </div>
+                                        <div md-rowspan="1" class="tile-description">
+                                            {{bot.description}}
+                                        </div>
+                                        <div md-rowspan="1" class="tile-tags" style="">
+                                            <span class="label label-default">Default</span>
+                                            <span class="label label-primary">Primary</span>
+                                            <span class="label label-success">Success</span>
+                                            <span class="label label-info">Info</span>
+                                            <span class="label label-warning">Warning</span>
+                                            <span class="label label-danger">Danger</span>                                        </div>
+                                    </md-grid-list>
+                                </md-grid-tile>
+                                <md-grid-tile md-colspan="1" >
+                                    <md-grid-list md-rows-gt-sm="2" layout="column" layout-align="center center">
+                                        <div md-rowspan="1">
+                                            <img ng-src="/img/comment.png" style="width: 24px; height: 21px" alt="Washed Out">
+                                        </div>
+                                        <div md-rowspan="1" class="title-comments">
+                                            {{bot.comments}}
+                                        </div>
+                                    </md-grid-list>
+                                </md-grid-tile>
+                            </md-grid-list>
+                        </div>
+                    </md-list-item>
+                </md-list>
+
+            </md-card>
+        </div>
+    </md-content>
+</div>
+
+
+<!-- bower:js -->
+<!-- endbower -->
+
+<!-- inject:js -->
+<!-- endinject -->
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "generator-stash",
+  "version": "1.0.0",
+  "description": "Generator for Stash Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files" : ["app","router"],
+  "author": "Manpreet Singh Bedi",
+  "license": "MIT",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.22.5"
+  }
+}
